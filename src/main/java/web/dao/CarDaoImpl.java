@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class CarDaoImpl implements CarDao{
 
     @Override
-    public List<Car> getListCars(int count) {
+    public List<Car> getListCars() {
 
         List<Car> carList = new ArrayList<>();
         carList.add(new Car("BMV", "petrol-electric", 2020));
@@ -20,6 +20,6 @@ public class CarDaoImpl implements CarDao{
         carList.add(new Car("Lada", "petrol", 2020));
         carList.add(new Car("Ford", "petrol-electric", 2010));
 
-        return carList.stream().limit(count).collect(Collectors.toList());
+        return carList;
     }
 }
