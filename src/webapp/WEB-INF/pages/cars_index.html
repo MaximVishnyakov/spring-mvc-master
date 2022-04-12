@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car</title>
+</head>
+<body>
+<h1>CARS</h1>
+<table border="1">
+    <tr>
+        <th>model</th>
+        <th>type</th>
+        <th>year</th>
+    </tr>
+
+<tr th:each="cars, state:${allCar}">
+
+    <td th:utext="${cars.model}">model</td>
+    <td th:utext="${cars.type}">type</td>
+    <td th:utext="${cars.year}">year</td>
+      <br>
+
+</tr>
+
+</body>
+</html>
